@@ -1,10 +1,14 @@
-import RestaurantList from "./RestaurantList";
+import RestaurantListItem from "./RestaurantListItem";
 
-const TopRestaurants = () => {
+const TopRestaurants = ({ eateries }) => {
   return (
     <section>
       <h1>Top restaurants in Clapham, London</h1>
-      <RestaurantList />
+      <ul>
+        {eateries.map((eatery) => (
+          <RestaurantListItem key={eatery.id} {...eatery.attributes} />
+        ))}
+      </ul>
     </section>
   );
 };

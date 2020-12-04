@@ -1,13 +1,11 @@
-const RestaurantListItem = ({ id, name, rating, cuisines, reviews }) => {
+const RestaurantListItem = ({ name, address, cuisines }) => {
   return (
-    <li key={id}>
+    <li>
       <h3>{name}</h3>
-      <p>
-        Rating: {rating} ({reviews.length} reviews)
-      </p>
+      <p>{address}</p>
       <ul>
-        {cuisines.map((cuisine, index) => (
-          <li key={index}>{cuisine}</li>
+        {cuisines.map((cuisine) => (
+          <li key={cuisine.id}>{cuisine.name}</li>
         ))}
       </ul>
     </li>
