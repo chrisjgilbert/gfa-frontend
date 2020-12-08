@@ -1,14 +1,11 @@
 import Layout from "../../components/Layout";
+import RestaurantBrief from "../../components/RestaurantBrief";
 import ReviewList from "../../components/ReviewList";
 
 const Restaurant = ({ eatery, reviews }) => {
-  const { name, address } = eatery;
-
-  console.log(reviews);
   return (
     <Layout>
-      <h1>{name}</h1>
-      <p>{address}</p>
+      <RestaurantBrief {...eatery} />
       <ReviewList {...reviews} />
     </Layout>
   );
