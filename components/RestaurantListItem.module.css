@@ -1,9 +1,8 @@
 .card {
   display: flex;
-  height: 224px;
   border-radius: 8px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 0 4px 0 rgba(0, 0, 0, 0.08);
-  background-color: #fff;
+  background-color: #f5f3f1;
   overflow: hidden;
   cursor: pointer;
   position: relative;
@@ -11,23 +10,42 @@
   margin-bottom: 24px;
 }
 
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
 .link {
-  color: #333333;
+  color: #444444;
   text-decoration: none;
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
-.title {
-  margin: 0;
+.infoContainer {
+  display: flex;
+  flex-direction: column;
 }
 
-.infoContainer {
+.title {
+  margin: 0 0 32px 0;
 }
 
 .image {
   border-radius: 50%;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02), 0 0 4px 0 rgba(0, 0, 0, 0.02);
+}
+
+.takeoutContainer {
+  margin-top: 16px;
+}
+
+.takeoutOption {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
 }

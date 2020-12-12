@@ -1,11 +1,19 @@
 import Link from "next/link";
 import Image from "next/image";
+import StarRatingComponent from "react-star-rating-component";
 
 import CuisineListItem from "./CuisineListItem";
 
 import styles from "./RestaurantListItem.module.css";
 
-const RestaurantListItem = ({ id, name, address, cuisines }) => {
+const RestaurantListItem = ({
+  id,
+  name,
+  address,
+  cuisines,
+  reviewsCount,
+  averageRating,
+}) => {
   const imageSrc = () => {
     return `/${name.split(" ").join("-")}.png`;
   };
@@ -15,12 +23,29 @@ const RestaurantListItem = ({ id, name, address, cuisines }) => {
         <a className={styles.link}>
           <div className={styles.infoContainer}>
             <h3 className={styles.title}>{name}</h3>
-            <p>{address}</p>
-            <ul>
-              {cuisines.map((cuisine) => (
-                <CuisineListItem key={cuisine.id} {...cuisine} />
-              ))}
-            </ul>
+            <span>{address.split(", ")[0]}</span>
+            <span>
+              <StarRatingComponent
+                starColor={"#444444"}
+                emptyStarColor={"#eeeeee"}
+                starCount={5}
+                value={averageRating}
+              />
+            </span>
+            <span>££</span>
+            <span>{cuisines.map((cuisine) => cuisine.name)}</span>
+            <div className={styles.takeoutContainer}>
+              <div className={styles.takeoutOption}>
+                <Image
+                  src={"/deliveroo.png"}
+                  alt="Deliveroo"
+                  objectFit="contain"
+                  height="32"
+                  width="32"
+                  size="fill"
+                />
+              </div>
+            </div>
           </div>
           <div className={styles.imageContainer}>
             <Image

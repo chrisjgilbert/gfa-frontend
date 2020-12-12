@@ -1,8 +1,7 @@
-import SidebarLayout from "../layouts/SidebarLayout";
+import Layout from "../layouts/Layout";
 
 import TopRestaurants from "../components/TopRestaurants";
 import Location from "../components/Location";
-import RestaurantFilters from "../components/RestaurantFilters";
 import Container from "../containers/Container";
 
 const Discover = ({ eateries }) => {
@@ -11,10 +10,9 @@ const Discover = ({ eateries }) => {
       <Container>
         <Location />
       </Container>
-      <SidebarLayout>
-        <RestaurantFilters />
+      <Layout>
         <TopRestaurants eateries={eateries} />
-      </SidebarLayout>
+      </Layout>
     </>
   );
 };
