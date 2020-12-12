@@ -1,8 +1,10 @@
 import Link from "next/link";
 
+import styles from "./RestaurantListItem.module.css";
+
 const RestaurantListItem = ({ id, name, address, cuisines }) => {
   return (
-    <li>
+    <li className={styles.card}>
       <Link href={`/restaurants/${id}`}>
         <a>
           <h3>{name}</h3>

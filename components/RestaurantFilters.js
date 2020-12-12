@@ -1,3 +1,5 @@
+import styles from "./RestaurantFilters.module.css";
+
 const cuisines = [
   { value: "All cuisines", label: "All" },
   { value: "Pizza", label: "Pizza" },
@@ -14,30 +16,34 @@ const ratings = [
 const RestaurantFilters = () => {
   return (
     <section>
-      <span>Cuisines</span>
-      {cuisines.map((cuisine) => (
-        <label htmlFor={cuisine.value}>
-          <input
-            type="checkbox"
-            name={cuisines.label}
-            id={cuisine.value}
-            value={cuisines.value}
-          />
-          <span>{cuisine.label}</span>
-        </label>
-      ))}
-      <span>Ratings</span>
-      {ratings.map((rating) => (
-        <label htmlFor={rating.value}>
-          <input
-            type="checkbox"
-            name={ratings.label}
-            id={rating.value}
-            value={ratings.value}
-          />
-          <span>{rating.label}</span>
-        </label>
-      ))}
+      <div className={styles.filter}>
+        <span>Cuisines</span>
+        {cuisines.map((cuisine) => (
+          <label htmlFor={cuisine.value}>
+            <input
+              type="checkbox"
+              name={cuisines.label}
+              id={cuisine.value}
+              value={cuisines.value}
+            />
+            <span>{cuisine.label}</span>
+          </label>
+        ))}
+      </div>
+      <div className={styles.filter}>
+        <span>Rating</span>
+        {ratings.map((rating) => (
+          <label htmlFor={rating.value}>
+            <input
+              type="checkbox"
+              name={ratings.label}
+              id={rating.value}
+              value={ratings.value}
+            />
+            <span>{rating.label}</span>
+          </label>
+        ))}
+      </div>
     </section>
   );
 };
