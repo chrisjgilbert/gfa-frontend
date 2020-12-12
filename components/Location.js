@@ -5,10 +5,10 @@ const Location = () => {
     <section className={styles.container}>
       <div className={styles.copy}>
         <h1>Best Gluten free options in Clapham, London</h1>
+        <p>Looking for a great gluten free food near Clapham, London?</p>
         <p>
-          Looking for a great gluten free food near Clapham, London? Gluten Free
-          Advisor has 10 great restaurants to chose from, covering Pizza,
-          Burgers and Pub Food.
+          Gluten Free Advisor has 10 great restaurants to chose from, covering
+          Pizza, Burgers and Pub Food.
         </p>
       </div>
       <div className={styles.map}>
