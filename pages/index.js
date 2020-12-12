@@ -1,6 +1,6 @@
 import Hero from "../components/Hero";
 import MarketingBlock from "../components/MarketingBlock";
-import Layout from "../components/Layout";
+import Layout from "../layouts/Layout";
 
 const HomePage = () => {
   return (

@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout";
+import Layout from "../../layouts/Layout";
 import RestaurantBrief from "../../components/RestaurantBrief";
 import ReviewList from "../../components/ReviewList";
 
@@ -21,7 +21,7 @@ export async function getStaticPaths() {
     (restaurant) => `/restaurants/${restaurant.id}`
   );
 
-  // We'll pre-render only these paths at build time.
+  // We'll pre-render only these paths at build time.../components/Layout
   // { fallback: false } means other routes should 404.
   return { paths, fallback: false };
 }

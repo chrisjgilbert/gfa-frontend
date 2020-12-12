@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copy {
+  flex: 1;
+}
+
+.map {
+  flex: 1;
+  justify-content: flex-end;
+  display: flex;
+}
