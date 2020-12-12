@@ -9,7 +9,7 @@ const MartketingBlock = () => {
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam.
       </p>
-      <Link href="/signup">
+      <Link href="/discover">
         <a>Get started</a>
       </Link>
     </section>
