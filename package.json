@@ -3,7 +3,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
-  },  
+  },
   "dependencies": {
     "next": "^10.0.3",
     "react": "^17.0.1",

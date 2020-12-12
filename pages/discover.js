@@ -1,9 +1,13 @@
 import Layout from "../components/Layout";
 import TopRestaurants from "../components/TopRestaurants";
+import Location from "../components/Location";
+import RestaurantFilters from "../components/RestaurantFilters";
 
 const Discover = ({ eateries }) => {
   return (
     <Layout>
+      <Location />
+      <RestaurantFilters />
       <TopRestaurants eateries={eateries} />
     </Layout>
   );
