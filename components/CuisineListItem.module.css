@@ -1,0 +1,11 @@
+.container {
+  padding: 8px 16px;
+  background-color: #6369d1;
+  border-radius: 8px;
+  display: inline-block;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02), 0 0 4px 0 rgba(0, 0, 0, 0.02);
+}
+
+.copy {
+  color: #ffffff;
+}
