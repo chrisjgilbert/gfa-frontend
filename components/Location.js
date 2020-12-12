@@ -4,7 +4,10 @@ const Location = () => {
   return (
     <section className={styles.container}>
       <div className={styles.copy}>
-        <h1>Gluten free restaurants in Clapham, London</h1>
+        <h1>
+          Gluten free restaurants in{" "}
+          <span className={styles.location}>Clapham, London</span>
+        </h1>
         <p>Looking for a great gluten free food near Clapham, London?</p>
         <p>
           Gluten Free Advisor has 10 great restaurants to chose from, covering
@@ -18,6 +21,7 @@ const Location = () => {
           allowFullScreen=""
           aria-hidden="false"
           tabIndex="0"
+          styles={styles.iframe}
         />
       </div>
     </section>
