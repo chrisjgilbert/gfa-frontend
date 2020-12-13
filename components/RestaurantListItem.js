@@ -2,8 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import StarRatingComponent from "react-star-rating-component";
 
-import CuisineListItem from "./CuisineListItem";
-
 import styles from "./RestaurantListItem.module.css";
 
 const RestaurantListItem = ({
@@ -29,20 +27,29 @@ const RestaurantListItem = ({
                 starColor={"#444444"}
                 emptyStarColor={"#eeeeee"}
                 starCount={5}
+                name={name}
                 value={averageRating}
               />
             </span>
             <span>££</span>
             <span>{cuisines.map((cuisine) => cuisine.name)}</span>
-            <div className={styles.takeoutContainer}>
-              <div className={styles.takeoutOption}>
+            <div className={styles.iconContainer}>
+              <div className={styles.icon}>
                 <Image
-                  src={"/deliveroo.png"}
-                  alt="Deliveroo"
-                  objectFit="contain"
-                  height="32"
-                  width="32"
-                  size="fill"
+                  className={styles.image}
+                  src={"/gf-icon.png"}
+                  alt="Takeaway available"
+                  height="100%"
+                  width="100%"
+                />
+              </div>
+              <div className={styles.icon}>
+                <Image
+                  className={styles.image}
+                  src={"/takeaway-icon.svg"}
+                  alt="Takeaway available"
+                  height="100%"
+                  width="100%"
                 />
               </div>
             </div>

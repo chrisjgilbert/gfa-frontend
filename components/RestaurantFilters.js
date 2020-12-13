@@ -28,7 +28,7 @@ const RestaurantFilters = () => {
         <button className={styles.button} onClick={handleOnPress}>
           Cuisines
         </button>
-        <div className={showCuisineOpts && styles.checkboxContainer}>
+        <div className={showCuisineOpts ? styles.checkboxContainer : undefined}>
           {showCuisineOpts &&
             cuisines.map((cuisine) => (
               <label htmlFor={cuisine.id}>
@@ -47,6 +47,12 @@ const RestaurantFilters = () => {
         </button>
         <button className={styles.button} onClick={handleOnPress}>
           Price
+        </button>
+        <button className={styles.button} onClick={handleOnPress}>
+          Celiac UK certified
+        </button>
+        <button className={styles.button} onClick={handleOnPress}>
+          Takeaway available
         </button>
       </div>
       <div className={styles.dropdownContainer}>

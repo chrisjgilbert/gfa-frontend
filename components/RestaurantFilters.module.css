@@ -1,6 +1,7 @@
 .container {
   display: flex;
   justify-content: space-between;
+  padding: 16px 0;
 }
 
 .filtersContainer {
@@ -10,16 +11,23 @@
 }
 
 .button {
+  margin-left: 8px;
   background-color: #f5f3f1;
   padding: 8px 16px;
-  border: 2px solid #444444;
+  border: 1px solid #444444;
   border-radius: 48px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02), 0 0 4px 0 rgba(0, 0, 0, 0.02);
+}
+
+.button:first-of-type {
+  margin-left: 0;
 }
 
 .checkboxContainer {
-  border: 2px solid #444444;
+  z-index: 1;
+  border: 1px solid #444444;
   position: absolute;
-  top: 64px;
+  top: 48px;
   background-color: #f5f3f1;
   display: flex;
   flex-direction: column;

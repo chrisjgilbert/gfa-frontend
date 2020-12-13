@@ -1,0 +1,9 @@
+.takeoutContainer {
+  margin-top: 16px;
+}
+
+.takeoutOption {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+}
