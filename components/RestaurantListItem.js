@@ -4,14 +4,7 @@ import StarRatingComponent from "react-star-rating-component";
 
 import styles from "./RestaurantListItem.module.css";
 
-const RestaurantListItem = ({
-  id,
-  name,
-  address,
-  cuisines,
-  reviewsCount,
-  averageRating,
-}) => {
+const RestaurantListItem = ({ id, name, address, cuisines, averageRating }) => {
   const imageSrc = () => {
     return `/${name.split(" ").join("-")}.png`;
   };

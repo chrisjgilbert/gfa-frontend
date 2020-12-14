@@ -5,7 +5,7 @@ const Location = () => {
     <section className={styles.container}>
       <div className={styles.copy}>
         <h1>
-          Gluten free restaurants in
+          Discover gluten free restaurants in
           <br />
           <span className={styles.location}>Clapham, London</span>
         </h1>

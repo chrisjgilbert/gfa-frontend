@@ -18,9 +18,7 @@ const Discover = ({ eateries }) => {
 };
 
 export async function getServerSideProps(context) {
-  console.log("CONTEXT****");
-  console.log(context);
-  const response = await fetch("http://localhost:8080/api/eateries");
+  const response = await fetch("http://localhost:8000/api/eateries");
   const json = await response.json();
 
   return {

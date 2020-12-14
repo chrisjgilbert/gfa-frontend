@@ -13,7 +13,7 @@ const Restaurant = ({ eatery, reviews }) => {
 
 export async function getStaticPaths() {
   // get all restaurants
-  const response = await fetch("http://localhost:8080/api/eateries");
+  const response = await fetch("http://localhost:8000/api/eateries");
   const restaurants = await response.json();
 
   // Get the paths we want to pre-render based on restaurants
@@ -29,10 +29,10 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
   const { id } = params;
   const eateryResponse = await fetch(
-    `http://localhost:8080/api/eateries/${id}`
+    `http://localhost:8000/api/eateries/${id}`
   );
   const reviewsResponse = await fetch(
-    `http://localhost:8080/api/eateries/${id}/reviews`
+    `http://localhost:8000/api/eateries/${id}/reviews`
   );
   const eateryJson = await eateryResponse.json();
   const reviewsJson = await reviewsResponse.json();

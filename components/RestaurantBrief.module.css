@@ -1,9 +1,68 @@
+.container {
+  display: flex;
+  padding: 32px 0;
+}
+
 .takeoutContainer {
   margin-top: 16px;
 }
 
 .takeoutOption {
+  height: 64px;
+  width: 64px;
+}
+
+.takeoutIcon {
   border-radius: 50%;
+}
+
+.icon {
   height: 32px;
   width: 32px;
+}
+
+.detailsContainer {
+  flex: 1;
+}
+
+.title {
+  margin: 0;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  height: 300px;
+  width: 300px;
+}
+
+.addressContainer,
+.budgetContainer {
+  padding: 8px 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.addressContainer .iconContainer,
+.budgetContainer .iconContainer {
+  width: 40px;
+}
+
+.addressLine {
+  display: block;
+}
+
+.subTitle {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.contactContainer {
+  padding: 16px 0;
+}
+
+.contactContainer a {
+  margin-right: 8px;
 }
