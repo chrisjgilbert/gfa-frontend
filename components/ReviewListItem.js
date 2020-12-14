@@ -1,4 +1,7 @@
 import Image from "next/image";
+import StarRatingComponent from "react-star-rating-component";
+
+import styles from "./ReviewListItem.module.css";
 
 const ReviewListItem = ({
   user,
@@ -10,17 +13,65 @@ const ReviewListItem = ({
   service,
 }) => {
   return (
-    <li>
-      <div className="image__container">
-        <Image src="/user-avatar.png" width="48" height="48" />
+    <li className={styles.card}>
+      <div className={styles.userInfo}>
+        <div className={styles.avatarContainer}>
+          <Image src="/user-avatar.png" width="48" height="48" />
+        </div>
+        <div className={styles.username}>{user}</div>
+        <div className={styles.userReviewCount}>4 reviews</div>
       </div>
-      <h3>Review by {user}</h3>
-      <h4>Rating: {rating}</h4>
-      <h5>Visited on {date}</h5>
-      <p>Gluten free options: {glutenFreeRange}</p>
-      <p>Value: {value}</p>
-      <p>Service: {service}</p>
-      <p>Review: {content}</p>
+      <div className={styles.reviewContainer}>
+        <div className={styles.header}>
+          <span className={styles.date}>Date of visit: {date}</span>
+          <div className={styles.ratingContainer}>
+            <StarRatingComponent
+              className={styles.stars}
+              starColor={"#444444"}
+              emptyStarColor={"lightgray"}
+              starCount={5}
+              name={rating}
+              value={rating}
+            />
+          </div>
+        </div>
+        <p>{content}</p>
+        <div className={styles.ratingContainer}>
+          <div className={styles.rating}>
+            <StarRatingComponent
+              className={styles.stars}
+              starColor={"#444444"}
+              emptyStarColor={"lightgray"}
+              starCount={5}
+              name={glutenFreeRange}
+              value={glutenFreeRange}
+            />
+            <span className={styles.ratingCategory}>Gluten free range</span>
+          </div>
+          <div className={styles.rating}>
+            <StarRatingComponent
+              className={styles.stars}
+              starColor={"#444444"}
+              emptyStarColor={"lightgray"}
+              starCount={5}
+              name={value}
+              value={value}
+            />
+            <span className={styles.ratingCategory}>Value</span>
+          </div>
+          <div className={styles.rating}>
+            <StarRatingComponent
+              className={styles.stars}
+              starColor={"#444444"}
+              emptyStarColor={"lightgray"}
+              starCount={5}
+              name={service}
+              value={service}
+            />
+            <span className={styles.ratingCategory}>Service</span>
+          </div>
+        </div>
+      </div>
     </li>
   );
 };

@@ -18,7 +18,7 @@ const RestaurantListItem = ({ id, name, address, cuisines, averageRating }) => {
             <span>
               <StarRatingComponent
                 starColor={"#444444"}
-                emptyStarColor={"#eeeeee"}
+                emptyStarColor={"lightgray"}
                 starCount={5}
                 name={name}
                 value={averageRating}

@@ -14,7 +14,7 @@
   margin-left: 8px;
   background-color: #f5f3f1;
   padding: 8px 16px;
-  border: 1px solid #444444;
+  border: 2px solid #444444;
   border-radius: 48px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.02), 0 0 4px 0 rgba(0, 0, 0, 0.02);
 }
@@ -25,7 +25,7 @@
 
 .checkboxContainer {
   z-index: 1;
-  border: 1px solid #444444;
+  border: 2px solid #444444;
   position: absolute;
   top: 48px;
   background-color: #f5f3f1;
@@ -51,4 +51,10 @@
 
 .select {
   margin-left: 8px;
+}
+
+.summaryContainer {
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 0 4px 0 rgba(0, 0, 0, 0.08);
+  background-color: #f5f3f1;
 }

@@ -49,7 +49,7 @@ const RestaurantFilters = () => {
           Price
         </button>
         <button className={styles.button} onClick={handleOnPress}>
-          Celiac UK certified
+          Acredited by Celiac UK
         </button>
         <button className={styles.button} onClick={handleOnPress}>
           Takeaway available

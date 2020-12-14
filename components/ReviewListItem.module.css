@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.08), 0 0 4px 0 rgba(0, 0, 0, 0.08);
+  background-color: #f5f3f1;
+  overflow: hidden;
+  position: relative;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 16px;
+  min-width: 50px;
+}
+
+.username {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.userReviewCount {
+  font-size: 0.75rem;
+}
+
+.ratingContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+}
+
+.rating:last-of-type {
+  margin-bottom: 0;
+}
+
+.reviewContainer {
+  padding: 0 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date {
+  font-size: 0.75rem;
+}
+
+.stars {
+  margin-right: 8px;
+}
+
+.ratingCategory {
+  font-size: 0.9rem;
+}
