@@ -1,0 +1,28 @@
+.header {
+  background-color: #f5f3f1;
+  color: #444444;
+}
+
+.headerContainer {
+  max-width: 1024px;
+  margin: auto;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.header span {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.header ul {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  grid-gap: 8px;
+}
+
+.nav ul li {
+  display: inline-block;
+}
