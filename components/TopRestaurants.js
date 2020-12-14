@@ -1,4 +1,3 @@
-import RestaurantFilters from "./RestaurantFilters";
 import RestaurantListItem from "./RestaurantListItem";
 
 import styles from "./TopRestaurants.module.css";
@@ -6,7 +5,6 @@ import styles from "./TopRestaurants.module.css";
 const TopRestaurants = ({ eateries }) => {
   return (
     <section>
-      <RestaurantFilters />
       <header className={styles.header}>
         <h2 className={styles.title}>
           Top gluten free restaurants in Clapham, London ({eateries.length})

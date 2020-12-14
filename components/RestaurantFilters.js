@@ -3,9 +3,8 @@ import { useState } from "react";
 import styles from "./RestaurantFilters.module.css";
 
 const cuisines = [
-  { value: "All cuisines", label: "All" },
-  { value: "Pizza", label: "Pizza" },
-  { value: "Burgers", label: "Burgers" },
+  { id: 1, value: "Pizza", label: "Pizza" },
+  { id: 2, value: "Burgers", label: "Burgers" },
 ];
 const ratings = [
   { value: "All ratings", label: "All" },
@@ -15,7 +14,7 @@ const ratings = [
   { value: "1", label: "1+" },
 ];
 
-const RestaurantFilters = () => {
+const RestaurantFilters = ({ handleFilterChange, currentFilter }) => {
   const [showCuisineOpts, setShowCuisineOpts] = useState(false);
 
   const handleOnPress = () => {
@@ -31,12 +30,14 @@ const RestaurantFilters = () => {
         <div className={showCuisineOpts ? styles.checkboxContainer : undefined}>
           {showCuisineOpts &&
             cuisines.map((cuisine) => (
-              <label htmlFor={cuisine.id}>
+              <label key={cuisine.id} htmlFor={cuisine.id}>
                 <input
-                  key={cuisine.id}
                   type="checkbox"
                   name={cuisine.label}
+                  value={cuisine.label}
                   id={cuisine.id}
+                  checked={currentFilter === cuisine.label}
+                  onChange={handleFilterChange}
                 />
                 <span styles={styles.checkboxLabel}>{cuisine.label}</span>
               </label>
@@ -61,8 +62,8 @@ const RestaurantFilters = () => {
           name="order"
           id="order"
         >
-          <option value="rating-asc">Highest Rating</option>
-          <option value="rating-sec">Lowest Rating</option>
+          <option value="rating asc">Highest Rating</option>
+          <option value="rating dec">Lowest Rating</option>
           <option value="date-asc">Date added</option>
           <option value="review-count">Review count</option>
         </select>

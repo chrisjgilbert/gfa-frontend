@@ -31,16 +31,7 @@ const RestaurantListItem = ({ id, name, address, cuisines, averageRating }) => {
                 <Image
                   className={styles.image}
                   src={"/gf-icon.png"}
-                  alt="Takeaway available"
-                  height="100%"
-                  width="100%"
-                />
-              </div>
-              <div className={styles.icon}>
-                <Image
-                  className={styles.image}
-                  src={"/takeaway-icon.svg"}
-                  alt="Takeaway available"
+                  alt="GF acredited"
                   height="100%"
                   width="100%"
                 />
