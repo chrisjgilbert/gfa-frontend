@@ -18,7 +18,6 @@ const Discover = (props) => {
   };
 
   const fetchEateries = async (filter) => {
-    console.log("HIIIII");
     const url = filter
       ? `${EATERIES_ENDPOINT}?cuisine=${filter}`
       : EATERIES_ENDPOINT;
@@ -41,7 +40,7 @@ const Discover = (props) => {
 
 const EATERIES_ENDPOINT = "http://localhost:8000/api/eateries";
 
-export async function getServerSideProps(context) {
+export async function getServerSideProps() {
   const response = await fetch(EATERIES_ENDPOINT);
   const json = await response.json();
 

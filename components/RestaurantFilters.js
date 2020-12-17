@@ -27,7 +27,7 @@ const RestaurantFilters = ({ handleFilterChange, currentFilter }) => {
         <button className={styles.button} onClick={handleOnPress}>
           Cuisines
         </button>
-        <div className={showCuisineOpts ? styles.checkboxContainer : undefined}>
+        <div className={showCuisineOpts ? styles.checkboxContainer : ""}>
           {showCuisineOpts &&
             cuisines.map((cuisine) => (
               <label key={cuisine.id} htmlFor={cuisine.id}>
@@ -62,8 +62,8 @@ const RestaurantFilters = ({ handleFilterChange, currentFilter }) => {
           name="order"
           id="order"
         >
-          <option value="rating asc">Highest Rating</option>
-          <option value="rating dec">Lowest Rating</option>
+          <option value="rating-asc">Highest Rating</option>
+          <option value="rating-sec">Lowest Rating</option>
           <option value="date-asc">Date added</option>
           <option value="review-count">Review count</option>
         </select>
